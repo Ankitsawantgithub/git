@@ -8,8 +8,12 @@ import Image from "next/image";
 //INTERNAL IMPORT
 import Style from "./Upload.module.css";
 import formStyle from "../AccountPage/Form/Form.module.css";
-import images from "../img";
-import { Button } from "../components/componentsindex.js";
+
+
+import images from "../img"
+
+
+import { Button } from "../components/iComponentsIndex";
 import { DropZone } from "./uploadNFTIndex.js";
 
 const UloadNFT = () => {

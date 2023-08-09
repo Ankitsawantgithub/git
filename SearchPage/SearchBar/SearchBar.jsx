@@ -2,7 +2,8 @@ import React from "react";
 import { BsSearch, BsArrowRight } from "react-icons/bs";
 
 //INTERNAL IMPORT
-import Style from "./SearchBar.module.css";
+import Style from "./SearchBar.module.css"
+
 const SearchBar = () => {
   return (
     <div className={Style.SearchBar}>

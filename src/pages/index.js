@@ -4,7 +4,10 @@ import { HeroSection, Service, BigNFTSilder, Subscribe, Title, Category, Filter,
 const index = () => {
   return (
     <div className={Style.homePage}>
-       
+       <Title
+        heading ="Ankit Sawant"
+        
+      />
       <HeroSection/>
       <Service/>
       <BigNFTSilder/>

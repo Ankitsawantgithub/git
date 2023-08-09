@@ -3,8 +3,10 @@ import Image from "next/image";
 
 //INTERNAL IMPORT
 import Style from "../styles/aboutus.module.css";
-import { Brand } from "../components/componentsindex";
-import images from "../img";
+
+import { Brand } from "../../components/iComponentsIndex";
+
+import  images  from "../../img";
 
 const aboutus = () => {
   const founderArray = [

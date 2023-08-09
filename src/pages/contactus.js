@@ -1,60 +1,101 @@
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import React from "react";
+import {
+  TiSocialFacebook,
+  TiSocialLinkedin,
+  TiSocialTwitter,
+  TiSocialYoutube,
+  TiSocialInstagram,
+} from "react-icons/ti";
+import { HiOutlineMail } from "react-icons/hi";
 
 //INTERNAL IMPORT
-import Style from "../styles/connectWallet.module.css";
-import images from "../img";
-const connectWallet = () => {
-  const [activeBtn, setActiveBtn] = useState(1);
-  const providerArray = [
-    {
-      provider: images.provider1,
-      name: "Metamask",
-    },
-    {
-      provider: images.provider2,
-      name: "walletConnect",
-    },
-    {
-      provider: images.provider3,
-      name: "walletlink",
-    },
-    {
-      provider: images.provider1,
-      name: "Formatic",
-    },
-  ];
-  return (
-    <div className={Style.connectWallet}>
-      <div className={Style.connectWallet_box}>
-        <h1>Connect your wallet</h1>
-        <p className={Style.connectWallet_box_para}>
-          Connect with one of our avaliabl wallet providers or create a new one
-        </p>
+import Style from "../styles/contactus.module.css";
 
-        <div className={Style.connectWallet_box_provider}>
-          {providerArray.map((el, i) => (
-            <div
-              className={`${Style.connectWallet_box_provider_item} ${
-                activeBtn == i + 1 ? Style.active : ""
-              }`}
-              key={i + 1}
-              onClick={() => setActiveBtn(i + 1)}
-            >
-              <Image
-                src={el.provider}
-                alt={el.provider}
-                width={50}
-                height={50}
-                className={Style.connectWallet_box_provider_item_img}
-              />
-              <p>{el.name}</p>
+import formStyle from "../../AccountPage/Form/Form.module.css"
+
+import { Button } from "../../components/iComponentsIndex";
+
+const contactus = () => {
+  return (
+    <div className={Style.contactus}>
+      <div className={Style.contactus_box}>
+        <h1>Contact</h1>
+        <div className={Style.contactus_box_box}>
+          <div className={Style.contactus_box_box_left}>
+            <div className={Style.contactus_box_box_left_item}>
+              <h3>🗺 ADDRESS</h3>
+              <p>
+                Photo booth tattooed prism, portland taiyaki hoodie neutra
+                typewriter
+              </p>
             </div>
-          ))}
+            <div className={Style.contactus_box_box_left_item}>
+              <h3>💌 EMAIL</h3>
+              <p>nc.example@example.com</p>
+            </div>
+            <div className={Style.contactus_box_box_left_item}>
+              <h3>☎ PHONE</h3>
+              <p>000-123-456-7890</p>
+            </div>
+            <div className={Style.contactus_box_box_left_item}>
+              <h3>🌏 SOCIALS</h3>
+              <a href="#">
+                <TiSocialFacebook />
+              </a>
+              <a href="#">
+                <TiSocialLinkedin />
+              </a>
+              <a href="#">
+                <TiSocialInstagram />
+              </a>
+              <a href="#">
+                <TiSocialYoutube />
+              </a>
+              <a href="#">
+                <TiSocialTwitter />
+              </a>
+            </div>
+          </div>
+          <div className={Style.contactus_box_box_right}>
+            <form>
+              <div className={formStyle.Form_box_input}>
+                <label htmlFor="name">Full Name</label>
+                <input
+                  type="text"
+                  placeholder="Ankit Sawant"
+                  className={formStyle.Form_box_input_userName}
+                />
+              </div>
+              <div className={formStyle.Form_box_input}>
+                <label htmlFor="email">Email</label>
+                <div className={formStyle.Form_box_input_box}>
+                  <div className={formStyle.Form_box_input_box_icon}>
+                    <HiOutlineMail />
+                  </div>
+                  <input type="text" placeholder="Email*" />
+                </div>
+              </div>
+              <div className={formStyle.Form_box_input}>
+                <label htmlFor="description">Message</label>
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="6"
+                  placeholder="something about yourself in few words"
+                ></textarea>
+              </div>
+              <Button
+                btnName="Send Message"
+                handleClick={() => {}}
+                classStyle={Style.button}
+              />
+            </form>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default connectWallet;
+export default contactus;

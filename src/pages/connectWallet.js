@@ -3,7 +3,7 @@ import Image from "next/image";
 
 //INTERNAL IMPORT
 import Style from "../styles/connectWallet.module.css";
-import images from "../img";
+import images from "../../img";
 const connectWallet = () => {
   const [activeBtn, setActiveBtn] = useState(1);
   const providerArray = [

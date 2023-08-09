@@ -28,32 +28,24 @@ const FollowerTabCard = ({ i, el }) => {
         <div className={Style.FollowerTabCard_box_img}>
           <Image
             className={Style.FollowerTabCard_box_img_img}
-            src={images.creatorbackground1}
+            src={el.background}
             alt="profile braground"
-            width={300}
+            width={200}
             height={200}
             objectFit="cover"
           />
         </div>
 
-        <div className={Style.FollowerTabCard_box_profile}>
-          <Image
-            className={Style.FollowerTabCard_box_profile_img}
-            alt="profile picture"
-            width={50}
-            height={50}
-            src={images.user2}
-          />
-        </div>
+        
 
         <div className={Style.FollowerTabCard_box_info}>
           <div className={Style.FollowerTabCard_box_info_name}>
-            <h6>
-              Giada Mann{""}{" "}
+            <h4>
+              Ankit{""}{" "}
               <span>
                 <MdVerified />
               </span>
-            </h6>
+            </h4>
            
           </div>
 

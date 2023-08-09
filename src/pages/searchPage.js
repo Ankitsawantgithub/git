@@ -1,18 +1,31 @@
-import React from "react";
+{/*import React from "react";
 
 //INTRNAL IMPORT
 import Style from "../styles/searchPage.module.css";
 
 
 import { Slider } from "../../components/iComponentsIndex";
-import { SearchBar } from "../SearchPage/searchBarIndex";
-
+import { SearchBar } from "../../SearchPage/searchBarIndex";
 import { Filter } from "../../components/iComponentsIndex";
 
-import { NFTCardTwo, Banner } from "../collectionPage/collectionIndex";
+import { NFTCardTwo } from "../../collectionPage/collectionIndex";
+const searchPage = () => {
+  
+  return (
+   
+  );
+};
 
-import images from "../../img";
+export default searchPage;*/}
 
+import React from 'react'
+import Style from "../styles/searchPage.module.css";
+
+import { Slider, Brand } from '../../components/iComponentsIndex';
+import { SearchBar } from '../../SearchPage/searchBarIndex';
+import { Filter } from '../../components/iComponentsIndex';
+import { NFTCardTwo , Banner} from '../../collectionPage/collectionIndex';
+import images from "../../img"
 const searchPage = () => {
   const collectionArray = [
     images.nft_image_1,
@@ -26,14 +39,14 @@ const searchPage = () => {
   ];
   return (
     <div className={Style.searchPage}>
-      <Banner bannerImage={images.creatorbackground2} />
-      <SearchBar />
-      <Filter />
-      <NFTCardTwo NFTData={collectionArray} />
-      <Slider />
-      <Brand />
-    </div>
-  );
-};
+    <Banner bannerImage={images.creatorbackground2} />
+    <SearchBar />
+    <Filter />
+    <NFTCardTwo NFTData={collectionArray} />
+    <Slider />
+    <Brand />
+  </div>
+  )
+}
 
-export default searchPage;
+export default searchPage
